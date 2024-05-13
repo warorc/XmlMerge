@@ -28,6 +28,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({IOException.class, ParserConfigurationException.class, TransformerException.class, SAXException.class})
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorResponseDTO handleInternalServerError(Exception e) {
-        return new ErrorResponseDTO("Bad Request", e.getMessage());
+        return new ErrorResponseDTO("Server Error", e.getMessage());
     }
 }
