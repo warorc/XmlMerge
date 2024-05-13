@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BSMessage xmlns="BS_R_PAYDOCRU" Version="string" ID="string" DateTime="">
+    <BSHead RSys="DBO2" ASys="CFT2" route="" xmlns="">
+        <Client RCustID="" ACustID="" INN="7703781110"/>
+        <Branch RBranchID="" ABranchID="" BIC="040702788"/>
+        <Office Officecode="009" Robotuser=""/>
+    </BSHead>
+    <DOCUMENTS xmlns="">
+        <DOCUMENT>
+            <AMOUNT>12.00</AMOUNT>
+            <CBCCODE/>
+            <CURRCODE>810</CURRCODE>
+            <CUSTID>200000126</CUSTID>
+            <IP>10.223.89.62</IP>
+            <MAC/>
+            <DOCDATEPARAM1>0</DOCDATEPARAM1>
+            <DOCDATEPARAM2/>
+            <DOCDATEPARAM3/>
+            <DOCNUMPARAM1/>
+            <DOCNUMPARAM2>0</DOCNUMPARAM2>
+            <GROUND>В том числе НДС 20% - 2.00</GROUND>
+            <OKATOCODE>0</OKATOCODE>
+            <OPERTYPE>01</OPERTYPE>
+            <PAYGRNDPARAM>0</PAYGRNDPARAM>
+            <PAYTYPEPARAM/>
+            <PAYUNTIL/>
+            <PAYER>ООО "Иррико-Холдинг"</PAYER>
+            <PAYERACCOUNT>40702810000090001443</PAYERACCOUNT>
+            <PAYERBIC>040702788</PAYERBIC>
+            <PAYERBANKNAME>ФИЛИАЛ БАНКА ВТБ (ПАО) В Г. СТАВРОПОЛЕ, г. Ставрополь</PAYERBANKNAME>
+            <PAYERBANKTYPE/>
+            <PAYERCORRACCOUNT>30101810100000000788</PAYERCORRACCOUNT>
+            <PAYERINN>7703781110</PAYERINN>
+            <PAYERKPP>876543210</PAYERKPP>
+            <PAYERPLACE/>
+            <PAYERPLACETYPE/>
+            <PAYERPROPERTYTYPE/>
+            <PAYMENTURGENT>5</PAYMENTURGENT>
+            <RECEIVER>Контрагент ИП 40802</RECEIVER>
+            <RECEIVERACCOUNT>40702810400260004426</RECEIVERACCOUNT>
+            <RECEIVERBIC>044525600</RECEIVERBIC>
+            <RECEIVERBANKNAME>АО "МИнБанк", г. Москва</RECEIVERBANKNAME>
+            <RECEIVERBANKTYPE/>
+            <RECEIVERCORRACCOUNT>30101810300000000600</RECEIVERCORRACCOUNT>
+            <RECEIVERINN>132808730606</RECEIVERINN>
+            <RECEIVERKPP>343443488</RECEIVERKPP>
+            <RECEIVERPLACE/>
+            <RECEIVERPLACETYPE/>
+            <RECEIVERPROPERTYTYPE/>
+            <SENDTYPE/>
+            <SIGNUID3>578aa17718884c61a38c7414671c1b12</SIGNUID3>
+            <SIGNNAME3>ммммм Лера Лера</SIGNNAME3>
+            <STAT1256/>
+            <TAXPERIODPARAM1>0</TAXPERIODPARAM1>
+            <TAXPERIODPARAM2/>
+            <TAXPERIODPARAM3/>
+            <DATETIMERECEIVE>22.02.2024:10:12:03</DATETIMERECEIVE>
+            <SERVICE/>
+            <CODEUIP/>
+            <STATUS/>
+            <SENDNUMBER/>
+            <RECEIVENUMBER/>
+            <DOCREF>1fd63ceb89e44fe8875e1892a1cec5f2</DOCREF>
+            <DOCUMENTDATE>22.02.2024</DOCUMENTDATE>
+            <DOCUMENTNUMBER>35</DOCUMENTNUMBER>
+            <DELIVERYTYPE>2</DELIVERYTYPE>
+            <CODEMESSAGE/>
+            <MESSAGEFORBANK/>
+            <DOCRECID/>
+            <RESFIELD/>
+            <SIGNHASH/>
+        </DOCUMENT>
+    </DOCUMENTS>
+</BSMessage>
