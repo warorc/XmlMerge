@@ -1,6 +1,7 @@
 package com.vpolosov.trainee.merge_xml.service.files;
 
-import com.vpolosov.trainee.merge_xml.exception.IncorrectXmlFileException;
+import com.vpolosov.trainee.merge_xml.aspect.Loggable;
+import com.vpolosov.trainee.merge_xml.handler.exception.IncorrectXmlFileException;
 import com.vpolosov.trainee.merge_xml.validators.XmlValidator;
 import java.io.File;
 import java.io.IOException;
@@ -17,16 +18,17 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-@Slf4j
+@Component
 public class MergeXmlFiles {
 
+    @Loggable
     public File merge(List<File> sourceXml, File xsdFile, String target) throws IOException, ParserConfigurationException, SAXException, TransformerException {
         File targetFile = new File(sourceXml.get(0).getParentFile().getPath(), target);
         XmlValidator xmlValidator = new XmlValidator();
