@@ -31,7 +31,6 @@ public class XmlValidator {
             validator.validate(new StreamSource(xmlFile));
             return true;
         } catch (SAXException e) {
-            System.out.println(e);
             return false;
         }
     }
