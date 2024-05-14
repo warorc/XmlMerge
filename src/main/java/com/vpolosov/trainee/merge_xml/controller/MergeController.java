@@ -8,7 +8,8 @@ import com.vpolosov.trainee.merge_xml.service.files.MergeXmlFiles;
 import com.vpolosov.trainee.merge_xml.validators.CheckFileSize;
 import com.vpolosov.trainee.merge_xml.validators.FilesNumberValidator;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.xml.sax.SAXException;
@@ -29,14 +30,14 @@ public class MergeController {
     private CheckFileSize checkFileSize;
     private FilesNumberValidator filesNumberValidator;
 
-    @GetMapping
-    public void patchXml() throws IOException, ParserConfigurationException, TransformerException, SAXException {
-        List<File> xmlFiles = countFiles.listXmlFiles("./sourceXml");
+    @PostMapping
+    public String patchXml(@RequestBody String path) throws IOException, ParserConfigurationException, TransformerException, SAXException {
+        List<File> xmlFiles = countFiles.listXmlFiles(path);
         if (filesNumberValidator.isExactlyTenXml(xmlFiles)) {
             throw new NotExactlyTenFilesException("There are not exactly 10 xml files");
         }
 
-        List<File> xsdFiles = countFiles.listXsdFiles("./sourceXml");
+        List<File> xsdFiles = countFiles.listXsdFiles(path);
         if (filesNumberValidator.isExactlyTenXml(xsdFiles)) {
             throw new NotExactlyOneXsdFileException("There are not exactly 1 xsd files");
         }
@@ -47,5 +48,6 @@ public class MergeController {
             target.delete();
             throw new MoreFiveHundredKbException("There are more than 500 kb files");
         }
+        return "Total.xml created!";
     }
 }
