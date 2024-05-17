@@ -33,12 +33,12 @@ public class MergeController {
     @PostMapping
     public String patchXml(@RequestBody String path) throws IOException, ParserConfigurationException, TransformerException, SAXException {
         List<File> xmlFiles = countFiles.listXmlFiles(path);
-        if (filesNumberValidator.isExactlyTenXml(xmlFiles)) {
-            throw new NotExactlyTenFilesException("There are not exactly 10 xml files");
+        if (filesNumberValidator.isMoreThanTenXml(xmlFiles)) {
+            throw new NotExactlyTenFilesException("There are more than 10 xml files");
         }
 
         List<File> xsdFiles = countFiles.listXsdFiles(path);
-        if (filesNumberValidator.isExactlyTenXml(xsdFiles)) {
+        if (filesNumberValidator.isExactlyOneXsd(xsdFiles)) {
             throw new NotExactlyOneXsdFileException("There are not exactly 1 xsd files");
         }
 

@@ -21,12 +21,14 @@ public class XmlValidator {
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI );
         Source schemaFile = new StreamSource(xsdFile);
         Schema schema = factory.newSchema(schemaFile);
+
         return schema.newValidator();
     }
 
     @Loggable
     public boolean isValid(File xsdFile, File xmlFile) throws IOException, SAXException {
         Validator validator = initValidator(xsdFile);
+
         try {
             validator.validate(new StreamSource(xmlFile));
             return true;
