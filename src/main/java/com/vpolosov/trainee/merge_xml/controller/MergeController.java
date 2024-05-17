@@ -48,6 +48,6 @@ public class MergeController {
             target.delete();
             throw new MoreFiveHundredKbException("There are more than 500 kb files");
         }
-        return "Total.xml created!";
+        return "Total.xml was created!";
     }
 }
