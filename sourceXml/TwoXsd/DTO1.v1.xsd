@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="BS_R_PAYDOCRU" xmlns:ns1="BS_R_PAYDOCRU">
+    <xs:element name="BSMessage">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BSHead" form="unqualified">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Client" form="unqualified">
+                                <xs:complexType>
+                                    <xs:attribute name="ACustID" use="required"/>
+                                    <xs:attribute name="INN" use="required" type="xs:integer"/>
+                                    <xs:attribute name="RCustID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Branch" form="unqualified">
+                                <xs:complexType>
+                                    <xs:attribute name="ABranchID" use="required"/>
+                                    <xs:attribute name="BIC" use="required" type="xs:integer"/>
+                                    <xs:attribute name="RBranchID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Office" form="unqualified">
+                                <xs:complexType>
+                                    <xs:attribute name="Officecode" use="required" type="xs:integer"/>
+                                    <xs:attribute name="Robotuser" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ASys" use="required" type="xs:NCName"/>
+                        <xs:attribute name="RSys" use="required" type="xs:NCName"/>
+                        <xs:attribute name="route" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DOCUMENTS" form="unqualified">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DOCUMENT" form="unqualified">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="AMOUNT" form="unqualified" type="xs:decimal"/>
+                                        <xs:element name="CBCCODE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="CURRCODE" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="CUSTID" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="IP" form="unqualified" type="xs:NMTOKEN"/>
+                                        <xs:element name="MAC" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="DOCDATEPARAM1" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="DOCDATEPARAM2" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="DOCDATEPARAM3" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="DOCNUMPARAM1" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="DOCNUMPARAM2" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="GROUND" form="unqualified" type="xs:string"/>
+                                        <xs:element name="OKATOCODE" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="OPERTYPE" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="PAYGRNDPARAM" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="PAYTYPEPARAM" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="PAYUNTIL" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="PAYER" form="unqualified" type="xs:string"/>
+                                        <xs:element name="PAYERACCOUNT" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="PAYERBIC" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="PAYERBANKNAME" form="unqualified" type="xs:string"/>
+                                        <xs:element name="PAYERBANKTYPE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="PAYERCORRACCOUNT" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="PAYERINN" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="PAYERKPP" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="PAYERPLACE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="PAYERPLACETYPE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="PAYERPROPERTYTYPE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="PAYMENTURGENT" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="RECEIVER" form="unqualified" type="xs:string"/>
+                                        <xs:element name="RECEIVERACCOUNT" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="RECEIVERBIC" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="RECEIVERBANKNAME" form="unqualified" type="xs:string"/>
+                                        <xs:element name="RECEIVERBANKTYPE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="RECEIVERCORRACCOUNT" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="RECEIVERINN" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="RECEIVERKPP" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="RECEIVERPLACE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="RECEIVERPLACETYPE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="RECEIVERPROPERTYTYPE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="SENDTYPE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="SIGNUID3" form="unqualified" type="xs:string"/>
+                                        <xs:element name="SIGNNAME3" form="unqualified" type="xs:string"/>
+                                        <xs:element name="STAT1256" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="TAXPERIODPARAM1" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="TAXPERIODPARAM2" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="TAXPERIODPARAM3" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="DATETIMERECEIVE" form="unqualified" type="xs:NMTOKEN"/>
+                                        <xs:element name="SERVICE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="CODEUIP" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="STATUS" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="SENDNUMBER" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="RECEIVENUMBER" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="DOCREF" form="unqualified" type="xs:string"/>
+                                        <xs:element name="DOCUMENTDATE" form="unqualified" type="xs:NMTOKEN"/>
+                                        <xs:element name="DOCUMENTNUMBER" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="DELIVERYTYPE" form="unqualified" type="xs:integer"/>
+                                        <xs:element name="CODEMESSAGE" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="MESSAGEFORBANK" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="DOCRECID" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="RESFIELD" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                        <xs:element name="SIGNHASH" form="unqualified">
+                                            <xs:complexType/>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="DateTime" use="required"/>
+            <xs:attribute name="ID" use="required" type="xs:NCName"/>
+            <xs:attribute name="Version" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

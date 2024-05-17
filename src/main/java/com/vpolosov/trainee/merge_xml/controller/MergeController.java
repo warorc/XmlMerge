@@ -38,7 +38,7 @@ public class MergeController {
         }
 
         List<File> xsdFiles = countFiles.listXsdFiles(path);
-        if (filesNumberValidator.isExactlyOneXsd(xsdFiles)) {
+        if (!filesNumberValidator.isExactlyOneXsd(xsdFiles)) {
             throw new NotExactlyOneXsdFileException("There are not exactly 1 xsd files");
         }
 

@@ -13,7 +13,7 @@ public class FilesNumberValidator {
 
     @Loggable
     public boolean isMoreThanTenXml(List<File> files) {
-        return files.size() > XML_FILES_NUMBER;
+        return files.isEmpty() || files.size() > XML_FILES_NUMBER;
     }
 
     @Loggable
