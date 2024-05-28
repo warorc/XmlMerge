@@ -8,6 +8,7 @@ import com.vpolosov.trainee.merge_xml.service.files.MergeXmlFiles;
 import com.vpolosov.trainee.merge_xml.validators.CheckFileSize;
 import com.vpolosov.trainee.merge_xml.validators.FilesNumberValidator;
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
 @RestController
@@ -49,5 +52,11 @@ public class MergeController {
             throw new MoreFiveHundredKbException("There are more than 500 kb files");
         }
         return "Total.xml was created!";
+    }
+
+    @GetMapping("/logs")
+    public String getLogs() throws IOException {
+        String path = "logs/user-logs.log";
+        return Files.readString(Path.of(path));
     }
 }
